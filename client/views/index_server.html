@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Websocket Ultra Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script/server.js"></script>
+  <script>
+    window.game_id = "{{game_id}}";
+  </script>
+  <link rel="stylesheet" type="text/css" href="/style/style.css">
+  <link rel="stylesheet" type="text/css" href="/style/server.css">
+</head>
+<body class="server waiting no-player">
+  <div class="waiting">
+    <h1>Welcome to the game {{game_id}}</h1>
+    <p>To play the game, <a href="/game/{{game_id}}">please visit this URL</a> with your phone or tablet.</p>
+    <p class="no-player">... waiting for players ...</p>
+    <div class="players"></div>
+  </div>
+  <div class="game">
+    <div class="current_player"></div>
+    <div class="trades"></div>
+    <div class="recap"></div>
+    <div class="board-wrapper"><div class="board"></div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Websocket Ultra Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script/client.js"></script>
+  <script>
+    window.game_id = "{{game_id}}";
+    window.player = {
+      id: "{{player_id}}",
+      color: "{{player_color}}"
+    };
+  </script>
+  <link rel="stylesheet" type="text/css" href="/style/style.css">
+  <link rel="stylesheet" type="text/css" href="/style/client.css">
+</head>
+<body class="client {{body_classes}}">
+  <div class="error">
+    <h1>{{error_message}}</h1>
+  </div>
+  <div class="game">
+    <h1>Welcome to the game {{game_id}}!</h1>
+    <p>
+      You are player {{player_id}}.
+    </p>
+    <div class="waiting">
+      Waiting for others players
+      <a class="button ready">READY</a>
+    </div>
+    <div class="game">
+      <a class="button action buy-field">BUY A FIELD (850$)</a><br/>
+      <br/>
+      <a class="button action build-factory">BUILD FACTORY (1600$)</a><br/>
+      <a class="button action upgrade-factory">UPGRADE FACTORY (2200$)</a><br/>
+      <a class="button action build-houses">BUILD HOUSES (1000$)</a><br/>
+      <a class="button action build-store">BUILD STORE (1200$)</a><br/>
+      <a class="button action build-laboratory">BUILD LABORATORY (2600$)</a><br/>
+      <br/>
+      <a class="button action change-salary">CHANGE SALARY</a><br/>
+      <a class="button action change-production-rate">CHANGE PRODUCTION RATE</a><br/>
+      <a class="button action change-factory-production">CHANGE FACTORY PRODUCTION</a><br/>
+      <a class="button action sell-production">SELL PRODUCTION</a><br/>
+      <br/>
+      <a class="button end-turn">NEXT TURN</a><br/>
+    </div>
+    <div class="finished">
+      GAME FINISHED
+    </div>
+  </div>
+</body>
+</html>

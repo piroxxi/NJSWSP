@@ -1,0 +1,20 @@
+body{
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.trade:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-right: 6px;
+    background-size: 100%;
+}
+.trade.red:before { background-image: url("../img/cube-red.png"); }
+.trade.orange:before { background-image: url("../img/cube-orange.png"); }
+.trade.cyan:before { background-image: url("../img/cube-cyan.png"); }
+.trade.green:before { background-image: url("../img/cube-green.png"); }

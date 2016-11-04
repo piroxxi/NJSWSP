@@ -1,0 +1,76 @@
+body.client{
+    font-size: 40px;
+    padding: 5%;
+    text-align: center;
+}
+body.disconnected .game { display: none; }
+body.connected    .error { display: none; }
+
+body.started  .game>.waiting { display: none; }
+
+body          .game>.game { display: none; }
+body.started  .game>.game { display: block; }
+body.waiting  .game>.game { opacity: 0.5; pointer-events: none; }
+body.finished .game>.game { display: none; }
+
+body          .game>.finished { display: none; }
+body.finished .game>.finished { display: block; }
+
+body.started h1 {
+    font-size: 0.6em;
+    margin: 0;
+}
+body.started p {
+    margin: 0 0 15px;
+    font-size: 0.6em;
+}
+
+.trade:before {
+    width: 30px;
+    height: 30px;
+}
+
+.button {
+    background: #2d2d2d;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin: 0 8px 25px;
+}
+.button.clicked {
+    background: #2d2d6d;
+}
+.button.toggled {
+    background: #2d6d2d;
+}
+input[type="range"]{
+    transform: scale(1.8);
+    padding: 10px;
+    margin-right: 70px;
+    height: 6px;
+}
+
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+}
+.popup-wrapper > .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    border-radius: 25px;
+    font-size: 0.8em;
+    padding: 0 10px 36px;
+}
+.popup-wrapper > .popup input {
+    font-size: 26px;
+}

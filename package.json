@@ -1,0 +1,14 @@
+{
+  "name": "NJSWSP",
+  "version": "0.0.8",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "express": "~4.13.1",
+    "socket.io": "~1.5.0",
+    "mustache": "~2.2.1",
+    "cookie-parser": "~1.4.3"
+  }
+}
