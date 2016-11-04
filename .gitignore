@@ -47,5 +47,10 @@ Temporary Items
 .apdisk
 
 
+
+
 # For node JS
 node_modules
+
+# For this project
+client/img/src
